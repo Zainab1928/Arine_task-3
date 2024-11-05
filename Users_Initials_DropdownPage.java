@@ -13,12 +13,12 @@ import static com.arine.automation.glue.CommonSteps.driverUtil;
 public class Users_Initials_DropdownPage {
     Actions actions = new Actions(DriverFactory.drivers.get());
 
-    public static final String USER_INITIALS_DROPDOWN = "//button[contains(@class,'MenuBar-__signOutButton')]";
-    public static final String DROPDOWN_MENU_ITEMS = "//div[contains(@class, 'node_modules-react-multilevel-dropdown-__menu___1mV4K')]//li";
-    public static final String LAYOUT_FIELD = "//li[contains(@class, 'node_modules-react-multilevel-dropdown-__item___3nfF2') and contains(text(), 'Layout')]";
-    public static final String LAYOUT_OPTIONS = "//div[contains(@class, 'node_modules-react-multilevel-dropdown-__submenu___1G4S9')]//li";
+    public static final String USER_INITIALS_DROPDOWN = "//button[span[contains(text(), '(DD')]]";
+    public static final String DROPDOWN_MENU_ITEMS = "//li[text()='Manage Access'] | //li[text()='Layout'] | //li[text()='Sign Out']";
+    public static final String LAYOUT_FIELD = "//li[contains(text(), 'Layout')]";
+    public static final String LAYOUT_OPTIONS = "//li[text()='Layout']//following-sibling::div//li[contains(text(), 'Lock Layout') or contains(text(), 'Unlock Layout') or contains(text(), 'Reset Layout')]";
     public static final String MANAGE_ACCESS_FIELD = "//li[contains(text(), 'Manage Access')]";
-    public static final String MANAGE_ACCESS_SUBMENU_ITEMS = "//div[contains(@class, 'node_modules-react-multilevel-dropdown-__submenu___1G4S9')]//li";
+    public static final String MANAGE_ACCESS_SUBMENU_ITEMS = "//li[text()='Manage Access']//following-sibling::div//li[text()='MFA Settings' or text()='Register SSO with GOOGLE']";
 
 
     // Method to open the user initials dropdown
