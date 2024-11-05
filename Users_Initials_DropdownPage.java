@@ -96,9 +96,11 @@ public class Users_Initials_DropdownPage {
     }
 
 
-    // Method to verify submenu options for Manage Access
-    public void verifyManageAccessSubmenuOptions(String expectedOptions) throws AutomationException {
-        // Get the expected submenu options
+    public void verifyManageAccessSubmenuOptions(String option1, String option2) throws AutomationException {
+        // Combine the options into a single string
+        String expectedOptions = option1 + ", " + option2;
+
+        // Split the expected options into a list
         List<String> expectedSubmenuOptions = Arrays.asList(expectedOptions.split(",\\s*"));
 
         // Perform hover action to display the submenu

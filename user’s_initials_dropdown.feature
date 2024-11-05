@@ -22,7 +22,7 @@ Feature: Verify that the upper right dropdown working properly
     #FS-382:TC-02
   Scenario: Verify that the user can see the following options by hovering on the Manage Access field: 1.MFA Settings, 2.Register SSO with Google
     When User clicks on Manage Access field
-    Then Verify that the user can see the options by hovering on the Manage Access field "MFA Settings, Register SSO with Google"
+    Then Verify that the user can see the options by hovering on the Manage Access field "MFA Settings" and "Register SSO with Google"
 
 
   @Regression @Smoke
@@ -30,7 +30,7 @@ Feature: Verify that the upper right dropdown working properly
   Scenario: Verify that the user can see the following options by hovering on the 'Layout' field 1.Lock/Unlock Layout, 2.Reset layout
 #    When User clicks on "user’s initials" dropDown
     And User clicks on "Layout" field
-    Then Verify that the user can see the options by hovering on the 'Layout' field "Unlock Layout, Reset layout"
+    Then Verify that the user can see the options by hovering on the Layout field "Unlock Layout" and "Reset layout"
 
 
   @Setup @Regression @Smoke
